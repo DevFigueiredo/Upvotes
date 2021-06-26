@@ -1,13 +1,17 @@
 import {Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn, EntityColumnNotFound} from 'typeorm';
 import {v4 as UUID} from 'uuid';
 
-@Entity("Users")
-class Users{
+@Entity("User")
+class User{
  @PrimaryColumn()
  id: string;
  
  @Column()
- email: string;
+ username: string;
+
+ @Column()
+ name: string;
+ 
  
  @UpdateDateColumn()
  updated_at: Date;
@@ -23,4 +27,4 @@ class Users{
 
 }
 
-export {Users};
+export {User};
