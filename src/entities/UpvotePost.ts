@@ -27,7 +27,6 @@ user: User;
 @ManyToOne(()=>Post)
 posts: Post;
 
-
 @UpdateDateColumn()
 updated_at: Date;
 

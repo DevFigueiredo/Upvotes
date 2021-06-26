@@ -1,4 +1,4 @@
-import {Entity, Column, CreateDateColumn, PrimaryColumn, JoinColumn, ManyToOne} from 'typeorm';
+import {Entity, Column, CreateDateColumn, PrimaryColumn, JoinColumn, ManyToOne, UpdateDateColumn} from 'typeorm';
 import {User} from './User';
 import {v4 as UUID} from 'uuid';
 
@@ -17,6 +17,10 @@ user: User;
  @Column()
  user_id: string;
 
+  
+ 
+ @UpdateDateColumn()
+ updated_at: Date;
  
  @CreateDateColumn()
  created_at: Date;

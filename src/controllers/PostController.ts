@@ -8,8 +8,8 @@ class PostController{
         const {post_text, user_id}: IPostCreate = request.body;
         try{
         const postService = new PostService();
-        const message = await postService.create({user_id, post_text})  
-        return response.json(message)
+        const post = await postService.create({user_id, post_text})  
+        return response.json(post)
         }catch(err){
         return response.status(400).json({
             messageError: err.message

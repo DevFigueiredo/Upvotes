@@ -19,11 +19,6 @@ export class Post1619049499164 implements MigrationInterface {
                     {
                         name: "user_id",
                         type: "uuid",
-                        default: true
-                    },
-                    {
-                        name: "status",
-                        type: "boolean"
                     },
                     {
                         name: "created_at",

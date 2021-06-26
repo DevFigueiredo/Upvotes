@@ -21,15 +21,25 @@ export class UpvotePost1619050736489 implements MigrationInterface {
                         type: "uuid",
                     },
                     {
+                        name: "status",
+                        type: "boolean",
+                    },
+                    {
                         name: "created_at",
+                        type: "timestamp",
+                        default: "now()"
+                    },
+                    {
+                        name: "updated_at",
                         type: "timestamp",
                         default: "now()"
                     }
                     
+                    
             ],
             foreignKeys:[{
                 name:"FKUser",
-                referencedTableName: "Users",
+                referencedTableName: "User",
                 referencedColumnNames: ["id"],
                 columnNames: ["user_id"],
                 onDelete: "SET NULL",
