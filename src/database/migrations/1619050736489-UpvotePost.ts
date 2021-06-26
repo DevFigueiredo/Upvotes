@@ -50,7 +50,7 @@ export class UpvotePost1619050736489 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("Messages");
+        await queryRunner.dropTable("UpvotesPost");
 
     }
 

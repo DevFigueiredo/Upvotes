@@ -50,7 +50,7 @@ export class Post1619049499164 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-       await queryRunner.dropTable("Settings");
+       await queryRunner.dropTable("Post");
 
 
     }
