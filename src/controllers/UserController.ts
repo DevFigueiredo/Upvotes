@@ -1,14 +1,14 @@
 import {Request, Response} from 'express';
-import { UsersService } from '../services/UsersService';
+import { IUserCreate, UserService } from '../services/UserService';
 
-class UsersController{
+class UserController{
 
 
    async create(request: Request, response: Response): Promise<Response>{
-        const {email} = request.body;
+        const {name, username}: IUserCreate = request.body;
         try{
-        const usersService = new UsersService();
-        const users = await usersService.create({email})  
+        const usersService = new UserService();
+        const users = await usersService.create({name,username})  
         return response.json(users)
         }catch(err){
         return response.status(400).json({
@@ -22,4 +22,4 @@ class UsersController{
 
 }
 
-export {UsersController};
+export {UserController};

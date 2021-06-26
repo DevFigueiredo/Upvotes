@@ -2,7 +2,7 @@ import { getCustomRepository, Repository } from 'typeorm';
 import { UpvotePost } from '../entities/UpvotePost';
 import { UpvotePostRepository } from '../respositories/UpvotePostRepository';
 
-interface ISeetingsCreate {
+export interface IUpvotePostCreate {
     post_id: string, 
     user_id: string
 }
@@ -15,7 +15,7 @@ class UpvotePostService{
         this.UpvotePostRepository = getCustomRepository(UpvotePostRepository);
     }
     
-   async create({post_id, user_id}: ISeetingsCreate){
+   async create({post_id, user_id}: IUpvotePostCreate){
     
     const UpvoteAlreadyExists = await this.UpvotePostRepository.findOne({
         post_id, user_id

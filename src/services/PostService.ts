@@ -1,7 +1,7 @@
 import { getCustomRepository, Repository } from 'typeorm';
 import { PostRepository } from '../respositories/PostRepository';
 import {Post} from '../entities/Post'
-interface IPostCreate{
+export interface IPostCreate{
     post_text: string,
     user_id: string,
 }

@@ -2,7 +2,7 @@ import { getCustomRepository, Repository } from 'typeorm';
 import { User } from '../entities/User';
 import { UserRepository } from '../respositories/UserRepository';
 
-interface IUserCreate {
+export interface IUserCreate {
     username: string,
     name: string
 }

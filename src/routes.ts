@@ -1,18 +1,18 @@
 import {Router} from 'express';
-import {SettingsController} from './controllers/SettingsController';
-import { UsersController } from './controllers/UsersController';
-import { MessagesController } from './controllers/MessagesController'
+import {UpvotePostController} from './controllers/UpvotePostController';
+import { UserController } from './controllers/UserController';
+import { PostController } from './controllers/PostController'
 
 const routes = Router();
 
-const settingsController = new SettingsController();
-const usersController = new UsersController();
-const messagesController = new MessagesController();
+const upvotePostController = new UpvotePostController();
+const userController = new UserController();
+const postController = new PostController();
 
-routes.post("/settings", settingsController.create);
-routes.post("/users", usersController.create);
-routes.post("/messages", messagesController.create);
-routes.get("/messages/:user_id", messagesController.showMessagesUser);
+routes.post("/upvotepost", upvotePostController.create);
+routes.post("/user/create", userController.create);
+routes.post("/post/create", postController.create);
+// routes.get("/messages/:user_id", postController.showMessagesUser);
 
 
 export {routes};
