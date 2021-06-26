@@ -5,7 +5,7 @@ export class UpvotePost1619050736489 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "UpvotesPost",
+                name: "UpvotePost",
                 columns: [
                     {
                         name: "id",

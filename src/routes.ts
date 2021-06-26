@@ -12,6 +12,7 @@ const postController = new PostController();
 routes.post("/upvotepost", upvotePostController.create);
 routes.post("/user/create", userController.create);
 routes.post("/post/create", postController.create);
+routes.get("/post/all", postController.all);
 // routes.get("/messages/:user_id", postController.showMessagesUser);
 
 

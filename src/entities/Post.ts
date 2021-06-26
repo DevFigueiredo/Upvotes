@@ -14,6 +14,7 @@ class Post{
 @ManyToOne(()=>User)
 user: User;
 
+
  @Column()
  user_id: string;
 

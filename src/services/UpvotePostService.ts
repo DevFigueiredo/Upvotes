@@ -32,13 +32,11 @@ class UpvotePostService{
     
     if(UpvoteAlreadyExists){
         const id = UpvoteAlreadyExists.id
-     if(UpvoteAlreadyExists.status){
+     if(!UpvoteAlreadyExists.status){
       return await this.update({id, status: true})//Ativa a curtida realizada
      }else{
         return await this.update({id, status: false})//Inativa a curtida realizada
     }
-
-        
     }
 
     const UpvotePost = this.create({post_id, user_id})
@@ -56,7 +54,9 @@ class UpvotePostService{
 
     
    async update({id, status}: IUpvoteUpdate){
-    return this.UpvotePostRepository.update(id, {status})
+    const UpvoteAlreadyExists = await this.UpvotePostRepository.findOne({id})
+
+    return this.UpvotePostRepository.save({...UpvoteAlreadyExists, status})
 }
 
 

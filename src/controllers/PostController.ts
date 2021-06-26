@@ -19,6 +19,21 @@ class PostController{
     }
 
 
+    
+   async all(request: Request, response: Response): Promise<Response>{
+    const {post_text, user_id}: IPostCreate = request.body;
+    try{
+    const postService = new PostService();
+    const posts = await postService.all()
+    return response.json(posts)
+    }catch(err){
+    return response.status(400).json({
+        messageError: err.message
+    })
+    }
+
+}
+
 }
 
 export {PostController};
