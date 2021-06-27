@@ -3,7 +3,7 @@ import {v4 as UUID} from 'uuid';
 import { Post } from './Post';
 import { User } from './User';
 
-@Entity("UpvotesPost")
+@Entity("UpvotePost")
 class UpvotePost{
  @PrimaryColumn()
  id: string;
