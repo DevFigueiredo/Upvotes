@@ -10,24 +10,24 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
-# Clone este repositório
+### Clone este repositório
 $ git clone <https://github.com/DevFigueiredo/Upvotes>
 
-# Acesse a pasta do projeto no terminal/cmd
+### Acesse a pasta do projeto no terminal/cmd
 $ cd Upvotes
 
-# Instale as dependências
+### Instale as dependências
 $ yarn install
 
-# Execute a aplicação em modo de desenvolvimento
+### Execute a aplicação em modo de desenvolvimento
 $ yarn dev
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333> 
+### O servidor inciará na porta:3333 - acesse <http://localhost:3333> 
 
-# Para rodar os testes da aplicação 
+### Para rodar os testes da aplicação 
 $ yarn test
 
-# Documentação da API do Projeto (Swagger) 
+### Documentação da API do Projeto (Swagger) 
 $ <http://localhost:3333/api-docs>
 
 
