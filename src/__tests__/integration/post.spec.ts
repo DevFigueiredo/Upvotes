@@ -20,7 +20,7 @@ describe('Testes Gerais do Sistema (Simplificado)', () => {
             const response = await request(app)
             .post('/user/create')
             .send(data)
-            expect(response.statusCode).toBe(200);    
+            expect(response.statusCode).toBe(201);    
      
         });    
       
@@ -31,7 +31,7 @@ describe('Testes Gerais do Sistema (Simplificado)', () => {
             .post('/post/create')
             .send(data)
             
-            expect(response.statusCode).toBe(200);
+            expect(response.statusCode).toBe(201);
           });
 
 
