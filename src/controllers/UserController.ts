@@ -9,7 +9,7 @@ class UserController{
         try{
         const usersService = new UserService();
         const users = await usersService.create({name,username})  
-        return response.json(users)
+        return response.status(201).json(users)
         }catch(err){
         return response.status(400).json({
             messageError: err.message

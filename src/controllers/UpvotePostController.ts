@@ -10,7 +10,7 @@ class UpvotePostController{
         const upvotePostService = new UpvotePostService();
         
        const upvoted = await upvotePostService.upvote({post_id, user_id})  
-       return response.json(upvoted)
+       return response.status(200).json(upvoted)
         }catch(err){
         return response.status(400).json({
             messageError: err.message
