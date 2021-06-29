@@ -93,7 +93,7 @@ routes.post("/post/create", postController.create);
 *                type: string
 *      responses:
 *        200:
-*          description: Created
+*          description: OK
  */
 routes.post("/upvotepost", upvotePostController.create);
 
